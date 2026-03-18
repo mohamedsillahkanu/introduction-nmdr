@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to National Malaria Data Repository</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c6693 0%, #1f4a6a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 30px;
+        }
+        .logo-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .logo-placeholder:hover {
+            transform: translateY(-5px);
+        }
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 15px;
+        }
+        .welcome-container {
+            background: white;
+            border-radius: 20px;
+            padding: 80px 60px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s ease;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .welcome-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #2c6693 0%, #4a90c4 100%);
+        }
+        h1 {
+            font-size: 52px;
+            color: #2c6693;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+            }
+            .welcome-container {
+                padding: 50px 30px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-header">
+        <div class="logo-placeholder">
+            <img src="NMCP.png" alt="Organization Logo 1">
+        </div>
+        <div class="logo-placeholder">
+            <img src="WHO.png" alt="Organization Logo 2">
+        </div>
+        <div class="logo-placeholder">
+            <img src="CHAI2.png" alt="Organization Logo 3">
+        </div>
+        <div class="logo-placeholder">
+            <img src="NU logo.png" alt="Organization Logo 4">
+        </div>
+        <div class="logo-placeholder">
+            <img src="ICF-SL.jpg" alt="Organization Logo 5">
+        </div>
+    </div>
+    
+    <div class="welcome-container">
+        <h1>Welcome to National Malaria Data Repository</h1>
+        <p class="subtitle">Your comprehensive platform for malaria surveillance and data management</p>
+    </div>
+    
+    <script>
+        console.log('National Malaria Data Repository loaded successfully!');
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.1",
+  "name": "Survaillance",
+  "description": "Surveillance",
+  "launch_path": "index.html",
+  "icons": {
+    "48": "icon.png"
+  },
+  "developer": {
+    "name": "Mohamed Sillah Kanu",
+    "url": ""
+  },
+  "activities": {
+    "dhis": {
+      "href": "*"
+    }
+  },
+  "appType": "DASHBOARD_WIDGET"
+}

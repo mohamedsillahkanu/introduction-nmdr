@@ -92,6 +92,53 @@
             color: #7f8c8d;
             line-height: 1.6;
         }
+
+        /* ── Video Section ── */
+        .video-section {
+            max-width: 800px;
+            width: 100%;
+            animation: slideUp 0.8s ease 0.2s both;
+        }
+        .video-label {
+            text-align: center;
+            color: rgba(255,255,255,0.85);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .video-wrapper {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            overflow: hidden;
+            position: relative;
+        }
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2c6693 0%, #4a90c4 100%);
+            z-index: 1;
+        }
+        .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+        .video-caption {
+            padding: 14px 20px;
+            font-size: 13px;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+
         @media (max-width: 768px) {
             .logo-placeholder {
                 width: 80px;
@@ -132,8 +179,54 @@
         <h1>Welcome to National Malaria Data Repository</h1>
         <p class="subtitle">Your comprehensive platform for malaria surveillance and data management</p>
     </div>
-    
+
+    <!-- ── Welcome Video ── -->
+    <div class="video-section">
+        <p class="video-label">Welcome Message</p>
+        <div class="video-wrapper">
+            <!--
+                TO UPDATE: Replace YOUR_VIDEO_ID with the actual YouTube video ID.
+                Example: For https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                         use   dQw4w9WgXcQ
+            -->
+            <iframe
+                src="https://www.bing.com/videos/riverview/relatedvideo?q=Youtube+National+Malaria+Data+Repository+WHO&&mid=3CD55FB298678592872F3CD55FB298678592872F&mmscn=mtsc&aps=42&FORM=VMSOVR"
+                title="NMDR Welcome Message"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p class="video-caption">A welcome note from the National Malaria Control Programme</p>
+        </div>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer style="
+        width: 100%;
+        text-align: center;
+        padding: 18px 20px;
+        color: rgba(255,255,255,0.55);
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 10px;
+    ">
+        Developed &amp; Maintained by &nbsp;
+        <a href="https://icf-sl.com" target="_blank" style="
+            color: rgba(255,255,255,0.85);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.35);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        "
+        onmouseover="this.style.color='#fff';this.style.borderColor='#fff'"
+        onmouseout="this.style.color='rgba(255,255,255,0.85)';this.style.borderColor='rgba(255,255,255,0.35)'"
+        >Informatics Consultancy Firm Sierra Leone (ICF-SL)</a>
+        &nbsp;&mdash;&nbsp; &copy; <span id="yr"></span>
+    </footer>
+
     <script>
+        document.getElementById('yr').textContent = new Date().getFullYear();
         console.log('National Malaria Data Repository loaded successfully!');
     </script>
 </body>
